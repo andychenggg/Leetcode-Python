@@ -1,5 +1,5 @@
-def Combinations(num: list)-> list[list]:
-    if len(num) == 0:
+def Combinations(num: list, r: int)-> list[list]:
+    if r == 0:
         return [[]]
     
     result = [[]]
@@ -7,8 +7,8 @@ def Combinations(num: list)-> list[list]:
     for i in range(len(num)):
         head = num[i]
         remain = num[i+1:]
-        for lst in Combinations(remain):
+        for lst in Combinations(remain, r-1):
             result.append([head] + lst)
     return result
 
-print(Combinations([1, 2, 3]))
+print(Combinations([1, 2, 3], 2))
