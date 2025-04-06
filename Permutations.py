@@ -1,11 +1,14 @@
 def permuations(num: list, r: int) -> list[list]:
-    '''
+    """
+    Calculate r-permuations of a list
+
     para:
     num: a list of comparable objects
     r: an int denoting the length of a permuation
+
     return: 
     a list of list, representing all permutations with length r, with a total number of P(n, r)
-    '''
+    """
     if r == 0:
         return [[]]
 
